@@ -1,0 +1,24 @@
+.tarot-card {
+	position: relative;
+	display: inline-block;
+	width: 180px;
+	height: 300px;
+	/* margin: 20px; */
+	z-index: 10;
+}
+
+.tarot-card img, h2 {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+
+.tarot-card h2 {
+	top: 0;
+	width: 230px;
+	text-align: center;
+}
+
+.tarot-card img {
+	top: 50px;
+}

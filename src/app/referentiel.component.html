@@ -1,3 +1,8 @@
 <h1>
   {{title}}
 </h1>
+<div id="application">
+	<div id="card-presentation">
+		<tarot-card *ngFor=" let card of cards" [card]="card"></tarot-card>
+	</div>
+</div>
