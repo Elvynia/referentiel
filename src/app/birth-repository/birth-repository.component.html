@@ -1,0 +1,56 @@
+<div class="birth-repository">
+	<div class="repository-row">
+		<div id="house-12" class="repository-house">
+			<birth-repository-house [house]="houses[11]"></birth-repository-house>
+		</div>
+	</div>
+	<div class="repository-row">
+		<div id="house-6" class="repository-house">
+			<birth-repository-house [house]="houses[5]"></birth-repository-house>
+		</div>
+		<div id="house-1" class="repository-house">
+			<birth-repository-house [house]="houses[0]"></birth-repository-house>
+		</div>
+		<div id="house-8" class="repository-house">
+			<birth-repository-house [house]="houses[7]"></birth-repository-house>
+		</div>
+	</div>
+	<div class="repository-row">
+		<div id="house-9" class="repository-house">
+			<birth-repository-house [house]="houses[8]"></birth-repository-house>
+		</div>
+		<div id="house-2" class="repository-house">
+			<birth-repository-house [house]="houses[1]"></birth-repository-house>
+		</div>
+		<div id="house-5" class="repository-house">
+			<birth-repository-house [house]="houses[4]"></birth-repository-house>
+		</div>
+		<div id="house-4" class="repository-house">
+			<birth-repository-house [house]="houses[3]"></birth-repository-house>
+		</div>
+		<div id="house-13" class="repository-house">
+			<birth-repository-house [house]="houses[12]"></birth-repository-house>
+		</div>
+	</div>
+	<div class="repository-row">
+		<div id="house-7" class="repository-house">
+			<birth-repository-house [house]="houses[6]"></birth-repository-house>
+		</div>
+		<div id="house-3" class="repository-house">
+			<birth-repository-house [house]="houses[2]"></birth-repository-house>
+		</div>
+		<div id="house-10" class="repository-house">
+			<birth-repository-house [house]="houses[9]"></birth-repository-house>
+		</div>
+	</div>
+	<div class="repository-row">
+		<div id="house-11" class="repository-house">
+			<birth-repository-house [house]="houses[10]"></birth-repository-house>
+		</div>
+	</div>
+</div>
+<div style="position:fixed; left:0; bottom:0; width:200px; background-color: white;">
+	Nombre à réduire : <input type="number" [(ngModel)]="toReduce">
+	<button (click)="reduce()">Reduce</button>
+	Nombre réduit : {{reduced}}
+</div>

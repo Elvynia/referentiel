@@ -1,0 +1,8 @@
+<div class="repository-house">
+	<h2>Maison {{house.index}}</h2>
+	<h3>{{house.title}}</h3>
+	<p>{{house.description}}</p>
+	<div *ngIf="card">
+		<tarot-card [card]="card"></tarot-card>
+	</div>
+</div>
