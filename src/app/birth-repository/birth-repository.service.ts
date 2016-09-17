@@ -95,6 +95,9 @@ export class BirthRepositoryService {
 			  result += Number(tmp[i]);
 		  }
 	  }
+	  if (result === 0) {
+		  result = 22;
+	  }
 	  return result;
   }
   
