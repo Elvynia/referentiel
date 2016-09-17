@@ -26,12 +26,11 @@ export class BirthRepositoryComponent implements OnChanges {
   }
 
   ngOnChanges() {
-	  if (this.birthDate && this.weatherYear) {
-		this.repositoryService.calculate(this.birthDate, this.weatherYear);
+	  if (this.birthDate) {
+		this.repositoryService.calculate(this.birthDate);
 	  }
-  }
-
-  private reduce() {
-	  this.reduced = this.repositoryService.reduce(this.toReduce.toString(), 22, []);
+	  if (this.weatherYear) {
+		this.repositoryService.recalculateM8(this.weatherYear);
+	  }
   }
 }

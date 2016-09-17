@@ -1,4 +1,4 @@
-<div class="tarot-card">
+<div class="tarot-card small" (mouseenter)="zoom($event)" (mouseleave)="zoom($event)">
 	<h2>{{card.name}}</h2>
 	<img [src]="card.imageUrl">
 </div>

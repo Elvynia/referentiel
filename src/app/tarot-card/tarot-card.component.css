@@ -1,23 +1,33 @@
 .tarot-card {
+	transform: scale(1);
+	transition: 1s;
+}
+
+.tarot-card.small {
 	position: relative;
-	display: inline-block;
-	width: 180px;
-	height: 300px;
+	display: block;
 	z-index: 10;
 }
 
-.tarot-card img, h2 {
-	position: absolute;
-	left: 50%;
-	transform: translate(-50%, 0);
+.tarot-card.large {
+	background-color: rgba(255, 255, 255, 0.8);
+	transform: scale(3);
+	z-index: 20;
 }
 
 .tarot-card h2 {
+	font-size: 11px;
 	top: 0;
-	width: 230px;
 	text-align: center;
 }
 
 .tarot-card img {
-	top: 50px;
+	display: block;
+	margin: auto;
+	height: 80px;
+	z-index: 10;
+}
+
+.tarot-card.large img {
+	z-index: 20;
 }

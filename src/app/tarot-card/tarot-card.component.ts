@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Renderer } from '@angular/core';
 
 @Component({
   moduleId: module.id,
@@ -6,12 +6,18 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: 'tarot-card.component.html',
   styleUrls: ['tarot-card.component.css']
 })
-export class TarotCardComponent implements OnInit {
-	@Input() card: any;
+export class TarotCardComponent {
+  @Input() card: any;
 
-  constructor() {}
+  constructor(private renderer: Renderer) {}
 
-  ngOnInit() {
+  private zoom(event: MouseEvent) {
+	if (event.type === 'mouseenter') {
+		this.renderer.setElementClass(event.target, 'small', false);
+		this.renderer.setElementClass(event.target, 'large', true);
+	} else {
+		this.renderer.setElementClass(event.target, 'large', false);
+		this.renderer.setElementClass(event.target, 'small', true);
+	}
   }
-
 }

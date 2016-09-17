@@ -69,7 +69,7 @@ export class BirthRepositoryService {
 	  cardIndex: -1
   }];
   
-  public calculate(birthDate: string, weatherYear: number) {
+  public calculate(birthDate: string) {
 	let dateParts = birthDate.split('-');
 	this.calculateM1(dateParts[2]);
 	this.calculateM2(dateParts[1]);
@@ -78,12 +78,17 @@ export class BirthRepositoryService {
 	this.calculateM5();
 	this.calculateM6();
 	this.calculateM7();
-	this.calculateM8(weatherYear);
 	this.calculateM9();
 	this.calculateM10();
 	this.calculateM11();
 	this.calculateM12();
 	this.calculateM13();
+  }
+  
+  public recalculateM8(weatherYear: number) {
+	  if (this.houses[5].cardIndex > 0) {
+	    this.calculateM8(weatherYear);
+	  }
   }
   
   reduce(value: string, max: number, exceptions: Array<number>): number {
