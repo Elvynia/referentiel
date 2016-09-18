@@ -24,7 +24,13 @@ export class ReferentielAppComponent {
   }
 
   get selectedDate(){
-    return this._selectedDate.toISOString().substring(0, 10);
+	  let result;
+	  try {
+		  result = this._selectedDate.toISOString().substring(0, 10)
+	  } catch (err) {
+		  console.debug('Birth date not valid !');
+	  }
+    return result;
   }
   
   constructor(private renderer: Renderer, private cardService: TarotCardService) {
