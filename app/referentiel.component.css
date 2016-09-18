@@ -16,7 +16,7 @@ h1 {
 }
 
 #application {
-	background-image: url('/images/background.jpeg');
+	background-image: url('images/background.jpeg');
     background-repeat: no-repeat;
 	margin: 0;
 	padding: 0;
