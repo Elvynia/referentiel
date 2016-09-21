@@ -5,6 +5,14 @@ h1 {
 	transform: translate(-50%, 0);
 }
 
+input[type='date'] {
+	outline: none;
+}
+
+input[type='date'].invalid {
+	border: 1px solid red;
+}
+
 #controls {
 	background-color: white;
 	position: fixed;

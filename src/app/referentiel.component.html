@@ -7,7 +7,7 @@
 	</div>
 	<birth-repository [birthDate]="selectedDate" [weatherYear]="weatherYear" *ngSwitchWhen="1"></birth-repository>
 </div>
-<div id="controls" (mouseenter)="updateTransparency($event)" (mouseleave)="updateTransparency($event)">
+<div id="controls" (mouseenter)="showControls($event)" (mouseleave)="hideControls($event)">
 	<h4>Choose display :</h4>
 	<label>Présentation</label>
 	<input name="display" type="radio" value="0" (change)="display = 0;">
@@ -15,7 +15,7 @@
 	<input name="display" type="radio" value="1" checked="true" (change)="display = 1;">
 	<div *ngIf="display === 1">
 		<h4>Date de naissance à partir de laquelle effectuer les calculs :</h4>
-		<input type="date" [(ngModel)]="selectedDate">
+		<input type="date" [ngClass]="{'invalid': !dateValid}" (change)="updateBirthDate()" #date>
 		<h4>Année de la météo à calculer :</h4>
 		<input type="number" min="1900" max="2100" [(ngModel)]="weatherYear">
 	<div>
