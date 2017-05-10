@@ -1,11 +1,11 @@
 {
   "name": "referentiel",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
     "start": "ng server",
-	"deploy": "rmdir /S /Q dist && ng github-pages:deploy",
+    "deploy": "rmdir /S /Q dist && ng github-pages:deploy",
     "postinstall": "typings install",
     "lint": "tslint \"src/**/*.ts\"",
     "format": "clang-format -i -style=file --glob=src/**/*.ts",
@@ -25,8 +25,8 @@
     "rxjs": "5.0.0-beta.6",
     "systemjs": "0.19.26",
     "zone.js": "^0.6.12",
-	"typings": "^0.8.1",
-	"angular-cli": "0.0.*"
+    "typings": "^0.8.1",
+    "angular-cli": "0.0.*"
   },
   "devDependencies": {
     "angular-cli": "0.0.*",
