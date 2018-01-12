@@ -1,0 +1,21 @@
+mat-toolbar {
+	height: 85px;
+}
+
+form {
+	background-color: #4B296B;
+    position: absolute;
+    right: 10px;
+    height: 50px;
+    padding: 10px;
+}
+
+form button {
+	position: absolute;
+	right: 2px;
+}
+
+div.br-main {
+	height: 100%;
+	background-image: url('/assets/background.jpeg');
+}

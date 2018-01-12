@@ -1,0 +1,8 @@
+div.br {
+	padding: 20px;
+	height: 100%;
+}
+
+div.br > div {
+	justify-content: center;
+}
