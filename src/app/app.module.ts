@@ -11,6 +11,8 @@ import { GeneratorComponent } from './generator/generator.component';
 import { HouseComponent } from './house/house.component';
 
 import { HouseService } from './house.service';
+import { CardService } from './card.service';
+import { RepositoryService } from './repository.service';
 
 @NgModule({
 	declarations: [
@@ -27,7 +29,9 @@ import { HouseService } from './house.service';
 		HttpClientModule
 	],
 	providers: [
-		HouseService
+		HouseService,
+		CardService,
+		RepositoryService
 	],
 	bootstrap: [AppComponent]
 })

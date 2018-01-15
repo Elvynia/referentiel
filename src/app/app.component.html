@@ -3,15 +3,15 @@
     <form>
         <mat-form-field (click)="picker.open()">
             <input matInput [matDatepicker]="picker" placeholder="Date de naissance"
-            [(ngModel)]="selectedDate" name="date" required>
+            [(ngModel)]="formData.date" name="date" required>
             <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
-        <mat-form-field>
+        <mat-form-field class="last">
             <input matInput type="number" placeholder="Année de a météo" 
-            [(ngModel)]="weatherYear" name="weather"
+            [(ngModel)]="formData.weather" name="weather"
             min="0" minlength="1" maxlength="4" required>
         </mat-form-field>
-        <button mat-mini-fab color="primary">Go</button>
+        <button mat-mini-fab color="primary" (click)="generate()">Go</button>
     </form>
 </mat-toolbar>
 <div class="br-main">
