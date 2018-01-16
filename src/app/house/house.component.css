@@ -1,3 +1,16 @@
-mat-card {
-	margin: 20px;
+mat-card.mat-card {
+	height: calc(100% - 30px);
+	padding: 15px;
+}
+
+div.cardImage {
+	background-size: cover;
+}
+
+p {
+	text-align: justify;
+}
+
+h3 {
+	text-align: center;
 }

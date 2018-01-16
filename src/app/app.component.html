@@ -1,9 +1,10 @@
 <mat-toolbar color="primary">
     <span>Référentiel de naissance</span>
     <form>
-        <mat-form-field (click)="picker.open()">
+        <mat-form-field>
             <input matInput [matDatepicker]="picker" placeholder="Date de naissance"
             [(ngModel)]="formData.date" name="date" required>
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
         <mat-form-field class="last">
@@ -14,6 +15,8 @@
         <button mat-mini-fab color="primary" (click)="generate()">Go</button>
     </form>
 </mat-toolbar>
-<div class="br-main">
-    <br-generator [date]="selectedDate" [weather]="weatherYear"></br-generator>
+<div class="br-main" fxLayout.lg="row" fxLayout.xs="column">
+    <br-generator [date]="selectedDate" [weather]="weatherYear"
+        (onSelect)="selectCard($event)" fxFlex="80%"></br-generator>
+    <br-card-details [for]="selectedCard" fxFlex="20%"></br-card-details>
 </div>

@@ -9,6 +9,7 @@ import { AppMaterialModule } from './app-material.module';
 import { AppComponent } from './app.component';
 import { GeneratorComponent } from './generator/generator.component';
 import { HouseComponent } from './house/house.component';
+import { CardDetailsComponent } from './card-details/card-details.component';
 
 import { HouseService } from './house.service';
 import { CardService } from './card.service';
@@ -18,7 +19,8 @@ import { RepositoryService } from './repository.service';
 	declarations: [
 		AppComponent,
 		GeneratorComponent,
-		HouseComponent
+		HouseComponent,
+		CardDetailsComponent
 	],
 	imports: [
 		BrowserModule,

@@ -6,13 +6,16 @@
 	"title": "Maison de la quête"
 }, {
 	"id": 3,
-	"title": "Maison de la pensée, siège des désirs et des peurs"
+	"title": "Maison de la pensée",
+	"description": "Aussi appelée le siège des désirs et des peurs."
 }, {
 	"id": 4,
-	"title": "Maison de l'action, siège de la mission existentielle"
+	"title": "Maison de l'action",
+	"description": "Aussi appelée siège de la mission existentielle."
 }, {
 	"id": 5,
-	"title": "Maison du passage obligé. « La croisée des chemins »"
+	"title": "Maison du passage obligé",
+	"description": "Aussi appelée « La croisée des chemins »."
 }, {
 	"id": 6,
 	"title": "Maison des ressources"
@@ -24,10 +27,11 @@
 	"title": "Maison des transformations"
 }, {
 	"id": 9,
-	"title": "Maison du soi, de la réussite"
+	"title": "Maison du soi",
+	"description": "Aussi appelée maison de la réussite."
 }, {
 	"id": 10,
-	"title": "Maison des échecs et des expériences"
+	"title": "Maison des échecs et expériences"
 }, {
 	"id": 11,
 	"title": "Capteur-enregistreur des mémoires du sujet"
@@ -36,5 +40,6 @@
 	"title": "Valeurs personnelles de transmition (VPT)"
 }, {
 	"id": 13,
-	"title": "Maison du paradoxe dite « Coeur de blason »"
+	"title": "Maison du paradoxe",
+	"description": "Aussi appelée le « Coeur de blason »."
 }]

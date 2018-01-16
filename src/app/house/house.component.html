@@ -1,13 +1,15 @@
 <mat-card>
 	<mat-card-header>
+		<div mat-card-avatar class="cardImage" [ngStyle]="{ 'background-image': 'url(' + card?.imageUrl + ')'}"></div>
 		<mat-card-title>
-			{{ house?.title }}
+			Maison n°{{ house.id }}
 		</mat-card-title>
 		<mat-card-subtitle>
-			{{ house?.description }}
+			<mat-hint>{{ house?.title }}</mat-hint>
 		</mat-card-subtitle>
 	</mat-card-header>
 	<mat-card-content>
-		{{ card?.name }}
+		<p>{{ house?.description }}</p>
+		<h3>{{ card?.name }}</h3>
 	</mat-card-content>
 </mat-card>

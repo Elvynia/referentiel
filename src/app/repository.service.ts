@@ -17,6 +17,10 @@ export class RepositoryService {
 		cardService.list.subscribe((cards: Array<TarotCard>) => this.cards = cards);
 	}
 
+	public get current(): Repository {
+		return this.repository.value;
+	}
+
 	public get events(): Observable<Repository> {
 		return this.repository.asObservable();
 	}
@@ -51,6 +55,7 @@ export class RepositoryService {
 		this.calculateM5(repo);
 		this.calculateM6(repo);
 		this.calculateM7(repo);
+		this.calculateM8(repo, weatherYear);
 		this.calculateM9(repo);
 		this.calculateM10(repo);
 		this.calculateM11(repo);

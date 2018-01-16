@@ -1,8 +1,8 @@
 div.br {
-	padding: 20px;
 	height: 100%;
+	padding: 5px;
 }
 
-div.br > div {
-	justify-content: center;
+br-house {
+	height: 90%;
 }

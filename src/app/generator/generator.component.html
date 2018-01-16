@@ -1,25 +1,42 @@
-<div class="br" fxLayout="column">
-	<div fxLayout.lg="row" fxLayout.xs="column">
-		<br-house [id]="12"></br-house>
+<div class="br" *ngIf="ready"
+    fxLayout="column" fxLayoutAlign="space-between center">
+	<div fxLayout.lg="row" fxLayout.xs="column" fxFlex>
+		<br-house [id]="12" fxFlex="250px"
+			(click)="select(12)"></br-house>
 	</div>
-	<div fxLayout.lg="row" fxLayout.xs="column">
-		<br-house [id]="6"></br-house>
-		<br-house [id]="1"></br-house>
-		<br-house [id]="8"></br-house>
+	<div fxLayout.lg="row" fxLayout.xs="column"
+		fxFlex fxFill="1 0" fxLayoutAlign="center center" fxLayoutGap="80px">
+		<br-house [id]="6" fxFlex="250px"
+			(click)="select(6)"></br-house>
+		<br-house [id]="1" fxFlex="250px"
+			(click)="select(1)"></br-house>
+		<br-house [id]="8" fxFlex="250px"
+			(click)="select(8)"></br-house>
 	</div>
-	<div fxLayout.lg="row" fxLayout.xs="column">
-		<br-house [id]="9"></br-house>
-		<br-house [id]="2"></br-house>
-		<br-house [id]="5"></br-house>
-		<br-house [id]="4"></br-house>
-		<br-house [id]="13"></br-house>
+	<div fxLayout.lg="row" fxLayout.xs="column"
+		fxFlex fxFill="1 0" fxLayoutAlign="space-between center">
+		<br-house [id]="9" fxFlex="250px"
+			(click)="select(9)"></br-house>
+		<br-house [id]="2" fxFlex="250px"
+			(click)="select(2)"></br-house>
+		<br-house [id]="5" fxFlex="250px"
+			(click)="select(5)"></br-house>
+		<br-house [id]="4" fxFlex="250px"
+			(click)="select(4)"></br-house>
+		<br-house [id]="13" fxFlex="250px"
+			(click)="select(13)"></br-house>
 	</div>
-	<div fxLayout.lg="row" fxLayout.xs="column">
-		<br-house [id]="7"></br-house>
-		<br-house [id]="3"></br-house>
-		<br-house [id]="10"></br-house>
+	<div fxLayout.lg="row" fxLayout.xs="column"
+		fxFlex fxFill="1 0" fxLayoutAlign="center center" fxLayoutGap="80px">
+		<br-house [id]="7" fxFlex="250px"
+			(click)="select(7)"></br-house>
+		<br-house [id]="3" fxFlex="250px"
+			(click)="select(3)"></br-house>
+		<br-house [id]="10" fxFlex="250px"
+			(click)="select(10)"></br-house>
 	</div>
-	<div fxLayout.lg="row" fxLayout.xs="column">
-		<br-house [id]="11"></br-house>
+	<div fxLayout.lg="row" fxLayout.xs="column" fxFlex>
+		<br-house [id]="11" fxFlex="250px"
+			(click)="select(11)"></br-house>
 	</div>
 </div>
