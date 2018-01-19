@@ -5,6 +5,8 @@ import { BehaviorSubject, Observable } from 'rxjs';
 
 import { TarotCard } from './card';
 
+import { environment as ENV } from '../environments/environment';
+
 @Injectable()
 export class CardService {
 	private subject: BehaviorSubject<Array<TarotCard>>;
@@ -18,7 +20,7 @@ export class CardService {
 	}
 
 	public load() {
-		this.httpClient.get('/assets/cards.json')
+		this.httpClient.get(ENV.baseUrl + '/assets/cards.json')
 			.subscribe((houses: Array<TarotCard>) => this.subject.next(houses));
 	}
 }

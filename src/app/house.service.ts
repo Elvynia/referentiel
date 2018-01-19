@@ -5,6 +5,8 @@ import { BehaviorSubject, Observable } from 'rxjs';
 
 import { House } from './house';
 
+import { environment as ENV } from '../environments/environment';
+
 @Injectable()
 export class HouseService {
 	private subject: BehaviorSubject<Array<House>>;
@@ -18,7 +20,7 @@ export class HouseService {
 	}
 
 	public load() {
-		this.httpClient.get('/assets/houses.json')
+		this.httpClient.get(ENV.baseUrl + '/assets/houses.json')
 			.subscribe((houses: Array<House>) => this.subject.next(houses));
 	}
 

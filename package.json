@@ -3,7 +3,7 @@
   "version": "0.1.1",
   "license": "MIT",
   "scripts": {
-    "publish": "ng build --prod --aot --build-optimizer --base-href \"http//elvynia.github.io/referentiel/\" && ngh",
+    "publish": "ng build --environment ghpages --aot --build-optimizer --base-href \"/referentiel/\" && ngh",
     "postinstall": "npm run build",
     "ng": "ng",
     "ngh": "ngh",
