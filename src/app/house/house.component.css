@@ -1,6 +1,8 @@
 mat-card.mat-card {
 	height: calc(100% - 30px);
 	padding: 15px;
+	position: relative;
+	z-index: 2;
 }
 
 div.cardImage {

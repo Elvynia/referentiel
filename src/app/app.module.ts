@@ -14,13 +14,15 @@ import { CardDetailsComponent } from './card-details/card-details.component';
 import { HouseService } from './house.service';
 import { CardService } from './card.service';
 import { RepositoryService } from './repository.service';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		GeneratorComponent,
 		HouseComponent,
-		CardDetailsComponent
+		CardDetailsComponent,
+		FormComponent
 	],
 	imports: [
 		BrowserModule,

@@ -1,42 +1,44 @@
-<div class="br" *ngIf="ready"
-    fxLayout="column" fxLayoutAlign="space-between center">
-	<div fxLayout.lg="row" fxLayout.xs="column" fxFlex>
-		<br-house [id]="12" fxFlex="250px"
-			(click)="select(12)"></br-house>
+<ng-container *ngIf="ready">
+	<div class="br" fxLayout="column" fxHide.xs>
+		<div fxLayout="row" fxLayoutAlign="center expand">
+			<br-house [id]="12"
+				(click)="select(12)"></br-house>
+		</div>
+		<div fxLayout="row" fxLayoutAlign="center expand">
+			<br-house [id]="6"
+				(click)="select(6)"></br-house>
+			<br-house [id]="1"
+				(click)="select(1)"></br-house>
+			<br-house [id]="8"
+				(click)="select(8)"></br-house>
+		</div>
+		<div fxLayout="row" fxLayoutAlign="center expand">
+			<br-house [id]="9"
+				(click)="select(9)"></br-house>
+			<br-house [id]="2"
+				(click)="select(2)"></br-house>
+			<br-house [id]="5"
+				(click)="select(5)"></br-house>
+			<br-house [id]="4"
+				(click)="select(4)"></br-house>
+			<br-house [id]="13"
+				(click)="select(13)"></br-house>
+		</div>
+		<div fxLayout="row" fxLayoutAlign="center expand">
+			<br-house [id]="7" 
+				(click)="select(7)"></br-house>
+			<br-house [id]="3" 
+				(click)="select(3)"></br-house>
+			<br-house [id]="10" 
+				(click)="select(10)"></br-house>
+		</div>
+		<div fxLayout="row" fxLayoutAlign="center expand">
+			<br-house [id]="11" 
+				(click)="select(11)"></br-house>
+		</div>
 	</div>
-	<div fxLayout.lg="row" fxLayout.xs="column"
-		fxFlex fxFill="1 0" fxLayoutAlign="center center" fxLayoutGap="80px">
-		<br-house [id]="6" fxFlex="250px"
-			(click)="select(6)"></br-house>
-		<br-house [id]="1" fxFlex="250px"
-			(click)="select(1)"></br-house>
-		<br-house [id]="8" fxFlex="250px"
-			(click)="select(8)"></br-house>
+	<div class="br" fxLayout="column" fxLayoutAlign="flex-start expand" fxHide.gt-xs>
+			<br-house *ngFor="let i of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]"
+				[id]="i" (click)="select(i)"></br-house>
 	</div>
-	<div fxLayout.lg="row" fxLayout.xs="column"
-		fxFlex fxFill="1 0" fxLayoutAlign="space-between center">
-		<br-house [id]="9" fxFlex="250px"
-			(click)="select(9)"></br-house>
-		<br-house [id]="2" fxFlex="250px"
-			(click)="select(2)"></br-house>
-		<br-house [id]="5" fxFlex="250px"
-			(click)="select(5)"></br-house>
-		<br-house [id]="4" fxFlex="250px"
-			(click)="select(4)"></br-house>
-		<br-house [id]="13" fxFlex="250px"
-			(click)="select(13)"></br-house>
-	</div>
-	<div fxLayout.lg="row" fxLayout.xs="column"
-		fxFlex fxFill="1 0" fxLayoutAlign="center center" fxLayoutGap="80px">
-		<br-house [id]="7" fxFlex="250px"
-			(click)="select(7)"></br-house>
-		<br-house [id]="3" fxFlex="250px"
-			(click)="select(3)"></br-house>
-		<br-house [id]="10" fxFlex="250px"
-			(click)="select(10)"></br-house>
-	</div>
-	<div fxLayout.lg="row" fxLayout.xs="column" fxFlex>
-		<br-house [id]="11" fxFlex="250px"
-			(click)="select(11)"></br-house>
-	</div>
-</div>
+</ng-container>

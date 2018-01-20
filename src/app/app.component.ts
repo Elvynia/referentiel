@@ -12,30 +12,24 @@ import { TarotCard } from './card';
 	styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-	formData: any;
 	selectedDate: moment.Moment;
 	weatherYear: number;
 	selectedCard: TarotCard;
 
 	constructor(private houseService: HouseService,
-		private cardService: CardService) {
-		this.formData = {
-			date: moment(),
-			weather: moment().get('year')
-		};
-	}
+		private cardService: CardService) { }
 
 	ngOnInit() {
 		this.houseService.load();
 		this.cardService.load();
 	}
 
-	generate() {
-		this.selectedDate = this.formData.date;
-		this.weatherYear = this.formData.weather;
-	}
-
 	selectCard(card: TarotCard) {
 		this.selectedCard = card;
+	}
+
+	generate(data: any) {
+		this.selectedDate = data.date;
+		this.weatherYear = data.weather;
 	}
 }

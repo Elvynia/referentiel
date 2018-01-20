@@ -1,0 +1,15 @@
+<form [class.mat-elevation-z6]="true" fxLayout.lg="row" fxLayout.xs="column">
+    <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Date de naissance"
+        [(ngModel)]="formData.date" name="date" required>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field class="last">
+        <input matInput type="number" placeholder="Année de la météo" 
+        [(ngModel)]="formData.weather" name="weather"
+        min="0" minlength="1" maxlength="4" required>
+    </mat-form-field>
+    <button mat-mini-fab color="primary" (click)="generate()"
+        [class.mat-elevation-z8]="true">Go</button>
+</form>

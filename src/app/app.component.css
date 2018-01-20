@@ -1,26 +1,32 @@
-mat-toolbar {
-	height: 85px;
-}
-
-form {
-	background-color: #4B296B;
-    position: absolute;
-    right: 10px;
-    height: 50px;
-    padding: 10px;
-}
-
-form button {
-	position: absolute;
-	right: 10px;
-}
-
-form mat-form-field.last {
-	margin-right: 40px;
-}
-
 div.br-main {
 	width: 100%;
-	height: calc(100% - 85px);
+	position: relative;
+}
+
+div.br-main:after {
 	background-image: url('/assets/background.jpeg');
+	opacity: 0.6;
+	content: ' ';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+span.brand {
+	flex: 1 1 auto;
+}
+
+@media (min-width: 960px) {
+	mat-toolbar {
+		height: 85px;
+	}
+
+	div.br-main {
+		height: calc(100% - 85px);
+	}
+
 }

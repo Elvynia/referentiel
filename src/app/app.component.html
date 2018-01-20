@@ -1,22 +1,10 @@
-<mat-toolbar color="primary">
-    <span>Référentiel de naissance</span>
-    <form>
-        <mat-form-field>
-            <input matInput [matDatepicker]="picker" placeholder="Date de naissance"
-            [(ngModel)]="formData.date" name="date" required>
-            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
-        </mat-form-field>
-        <mat-form-field class="last">
-            <input matInput type="number" placeholder="Année de la météo" 
-            [(ngModel)]="formData.weather" name="weather"
-            min="0" minlength="1" maxlength="4" required>
-        </mat-form-field>
-        <button mat-mini-fab color="primary" (click)="generate()">Go</button>
-    </form>
+<mat-toolbar color="primary" [class.mat-elevation-z4]="true">
+    <span class="brand">Référentiel de naissance</span>
+    <br-form (onGenerate)="generate($event)" fxHide.xs></br-form>
 </mat-toolbar>
-<div class="br-main" fxLayout.lg="row" fxLayout.xs="column">
+<br-form (onGenerate)="generate($event)" fxHide.gt-xs></br-form>
+<div class="br-main" fxLayout.gt-xs="row">
     <br-generator [date]="selectedDate" [weather]="weatherYear"
-        (onSelect)="selectCard($event)" fxFlex="80%"></br-generator>
-    <br-card-details [for]="selectedCard" fxFlex="20%"></br-card-details>
+        (onSelect)="selectCard($event)" fxFlex.gt-xs="80%"></br-generator>
+    <br-card-details [for]="selectedCard" fxFlex.gt-xs="20%" fxHide.xs></br-card-details>
 </div>
