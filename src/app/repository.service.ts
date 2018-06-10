@@ -129,7 +129,7 @@ export class RepositoryService {
 	}
 
 	private calculateM13(repo: Repository) {
-		let resultA: number = repo[9].index + repo[2].index + repo[5].index + repo[6].index;
+		let resultA: number = repo[9].index + repo[2].index + repo[5].index + repo[4].index;
 		let resultB: number = repo[11].index + repo[3].index + repo[5].index + repo[1].index + repo[12].index;
 		repo[13] = this.toCard(this.reduce(resultA + resultB, 22, []));
 	}
